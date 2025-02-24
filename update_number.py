@@ -110,12 +110,13 @@ def update_cron_with_random_time():
 
 def main():
     try:
-        current_number = read_number()
-        new_number = current_number + 1
-        write_number(new_number)
-        git_commit()
-        git_push()
-        update_cron_with_random_time()
+        number = random.randint(2, 5)
+        for _ in range(number):
+            current_number = read_number()
+            new_number = current_number + 1
+            write_number(new_number)
+            git_commit()
+            git_push()
     except Exception as e:
         print(f"Error: {str(e)}")
         exit(1)
