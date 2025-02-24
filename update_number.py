@@ -110,7 +110,7 @@ def update_cron_with_random_time():
 
 def main():
     try:
-        number = random.randint(2, 5)
+        number = random.randint(1, 7)
         for _ in range(number):
             current_number = read_number()
             new_number = current_number + 1
